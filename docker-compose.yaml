@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  ducky:
+      image: "duckvbear"
+      volumes:
+        - .:/app
+      command: python3 src/duck_main.py
+  bear:
+      image: "duckvbear"
+      volumes:
+        - .:/app
+      command: python3 src/bear_main.py
+  test:
+    image: "duckvbear"
+    volumes:
+      - .:/app
+    command: python3 -m pytest
