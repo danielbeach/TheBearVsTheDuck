@@ -17,7 +17,7 @@ def main():
     """)
 
     duckdb.sql("""
-        COPY metrics TO 's3://confessions-of-a-data-guy/results.parquet';
+        COPY metrics TO 's3://confessions-of-a-data-guy/results.parquet' (FORMAT PARQUET);
     """)
 
 
